@@ -45,6 +45,8 @@ The trained model was designed to detect six categories:
 
 ## Current Status
 Dataset preprocessing, merging, model training, and initial image-based testing have been completed. Webcam-based inspection and further model improvements remain ongoing work.
+- Webcam-based conveyor belt damage detection implemented and initial testing completed.
+- Model accuracy and detection of small defects require further improvement.
 
 ## Limitations and Future Scope
 - Improve detection of small cracks and subtle defects.
