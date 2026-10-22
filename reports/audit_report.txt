@@ -1,0 +1,274 @@
+
+======================================================================
+  SIH26008 — CONVEYOR BELT AI — FULL DATASET & MODEL AUDIT
+======================================================================
+  Python    : 3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]
+  torch     : NOT installed [WARN]
+  pyyaml    : installed [OK]
+  Root dir  : C:\Users\Harishmakamali\OneDrive\Documents\Conveyor Belt Project
+
+======================================================================
+  MODEL INSPECTION
+======================================================================
+
+  ── Model: old_five_class ──
+  Path : C:\Users\Harishmakamali\OneDrive\Documents\Conveyor Belt Project\old_five_class_model.pt
+  Exists: True
+  Size : 5.96 MB
+  ⚠️  torch not installed — cannot inspect model internals
+
+  ── Model: best_tear ──
+  Path : C:\Users\Harishmakamali\OneDrive\Documents\Conveyor Belt Project\best.pt
+  Exists: True
+  Size : 5.96 MB
+  ⚠️  torch not installed — cannot inspect model internals
+
+======================================================================
+  DATASET: DS1_OBB
+======================================================================
+  ZIP : Conveyor-belt-damage 3.v1i.yolov8-obb.zip
+  Size: 47.23 MB
+  Extracting to temp: C:\Users\HARISH~1\AppData\Local\Temp\sih_DS1_OBB_9kflqg75
+
+  Total extracted files : 1856
+  Image files           : 922
+  Label files           : 924
+  YAML files            : ['data.yaml']
+
+  ── data.yaml content ──
+
+  File: data.yaml
+path: ../datasets/roboflow
+
+train: train/images
+val: valid/images
+test: test/images
+
+names: 
+  0: Hole
+  1: Human
+  2: Other Objects
+  3: Puncture
+  4: Roller
+  5: Tear
+  6: impact damage
+  7: patch work
+
+  Declared classes (nc=?): {0: 'Hole', 1: 'Human', 2: 'Other Objects', 3: 'Puncture', 4: 'Roller', 5: 'Tear', 6: 'impact damage', 7: 'patch work'}
+
+  ── Per-split image and label counts ──
+  [train] images: 645   labels: 0
+  [valid] images: 185   labels: 0
+  [test] images: 92   labels: 0
+
+  ── Label format detection (sample 10 files) ──
+  Label format distribution (from up to 200 files): {'obb': 199, 'empty': 1}
+
+  ── Class distribution across ALL label files ──
+  Total bounding boxes / polygons : 2470
+  Empty label files               : 4
+  Invalid/unparseable rows        : 0
+
+  Class ID → count:
+    [0] ?                              : 42
+    [1] ?                              : 118
+    [2] ?                              : 130
+    [3] ?                              : 120
+    [4] ?                              : 681
+    [5] ?                              : 691
+    [6] ?                              : 283
+    [7] ?                              : 405
+
+  ── Sample label file contents (first 3 non-empty) ──
+
+  File: README.dataset.txt
+  Format: mixed([1, 4, 5])  | Rows: 4
+    ['#', 'Conveyor-belt-damage', '>', '2024-07-01', '6:15am']
+    ['https://universe.roboflow.com/sample-wy2mp/conveyor-belt-damage']
+    ['Provided', 'by', 'a', 'Roboflow', 'user']
+    ['License:', 'CC', 'BY', '4.0']
+
+  File: README.roboflow.txt
+  Format: mixed([1, 2, 5, 6, 7, 8, 9, 10, 11, 14, 15])  | Rows: 19
+    ['Conveyor-belt-damage', '-', 'v1', '2024-07-01', '6:15am']
+    ['==============================']
+    ['This', 'dataset', 'was', 'exported', 'via', 'roboflow.com', 'on', 'October', '17,', '2024', 'at', '12:22', 'PM', 'GMT']
+    ['Roboflow', 'is', 'an', 'end-to-end', 'computer', 'vision', 'platform', 'that', 'helps', 'you']
+    ['*', 'collaborate', 'with', 'your', 'team', 'on', 'computer', 'vision', 'projects']
+
+  File: valid\labels\1-13-_jpeg.rf.9f06aaec91cb64af4e7c3a00613f86d6.txt
+  Format: obb  | Rows: 1
+    [0.0, 1.0, 0.22499999999999995, 0.7409193745683487, -0.10289891592150631, 0.602777778125, 0.00625, 0.8618584035566516, 0.33414891592150625]
+
+  ── Coordinate/format issues (first 5 files) ──
+  valid\labels\1-13-_jpeg.rf.9f06aaec91cb64af4e7c3a00613f86d6.txt
+    Row 0, coord 3: -0.1029 out of [0,1]
+  valid\labels\1-17-_jpeg.rf.aba1d7a1cc4eaffc345986f891482076.txt
+    Row 0, coord 3: -0.1512 out of [0,1]
+  valid\labels\10-11-_jpeg.rf.f01e4df6e88bbc01660a5f45a70df676.txt
+    Row 0, coord 4: -0.0456 out of [0,1]
+    Row 1, coord 4: -0.0243 out of [0,1]
+    Row 3, coord 4: -0.0167 out of [0,1]
+  valid\labels\10-16-_jpeg.rf.fdf9512a31c8841ee21155e61c1c5092.txt
+    Row 0, coord 3: -0.0104 out of [0,1]
+    Row 3, coord 4: -0.0503 out of [0,1]
+    Row 4, coord 4: -0.0149 out of [0,1]
+  valid\labels\10-2-_jpeg.rf.a56ea25bd83edb285cf2abc0439402b9.txt
+    Row 0, coord 0: 1.0000 out of [0,1]
+    Row 1, coord 7: 1.0061 out of [0,1]
+    Row 2, coord 4: -0.0213 out of [0,1]
+
+  Temp dir cleaned up.
+
+======================================================================
+  DATASET: DS2_STANDARD
+======================================================================
+  ZIP : CONVEYOR BELT 2.v2i.yolov8.zip
+  Size: 78.97 MB
+  Extracting to temp: C:\Users\HARISH~1\AppData\Local\Temp\sih_DS2_STANDARD_2mw2v_g4
+
+  Total extracted files : 2535
+  Image files           : 1263
+  Label files           : 1265
+  YAML files            : ['data.yaml']
+
+  ── data.yaml content ──
+
+  File: data.yaml
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['tear']
+
+roboflow:
+  workspace: project-iyhcv
+  project: conveyor-belt-floh2
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/project-iyhcv/conveyor-belt-floh2/dataset/2
+
+  Declared classes (nc=1): ['tear']
+
+  ── Per-split image and label counts ──
+  [train] images: 631   labels: 0
+  [valid] images: 632   labels: 0
+
+  ── Label format detection (sample 10 files) ──
+  Label format distribution (from up to 200 files): {'standard': 200}
+
+  ── Class distribution across ALL label files ──
+  Total bounding boxes / polygons : 1301
+  Empty label files               : 0
+  Invalid/unparseable rows        : 0
+
+  Class ID → count:
+    [0] tear                           : 1301
+
+  ── Sample label file contents (first 3 non-empty) ──
+
+  File: README.dataset.txt
+  Format: mixed([1, 4, 5, 6])  | Rows: 4
+    ['#', 'CONVEYOR', 'BELT', '>', '2024-07-29', '1:16pm']
+    ['https://universe.roboflow.com/project-iyhcv/conveyor-belt-floh2']
+    ['Provided', 'by', 'a', 'Roboflow', 'user']
+    ['License:', 'CC', 'BY', '4.0']
+
+  File: README.roboflow.txt
+  Format: mixed([1, 2, 5, 6, 7, 8, 9, 10, 11, 14, 15])  | Rows: 19
+    ['CONVEYOR', 'BELT', '-', 'v2', '2024-07-29', '1:16pm']
+    ['==============================']
+    ['This', 'dataset', 'was', 'exported', 'via', 'roboflow.com', 'on', 'August', '1,', '2024', 'at', '2:58', 'PM', 'GMT']
+    ['Roboflow', 'is', 'an', 'end-to-end', 'computer', 'vision', 'platform', 'that', 'helps', 'you']
+    ['*', 'collaborate', 'with', 'your', 'team', 'on', 'computer', 'vision', 'projects']
+
+  File: valid\labels\101_jpg.rf.2bf21989f5b8ba1e49ae08df80254adb.txt
+  Format: standard  | Rows: 1
+    [0.0, 0.55390625, 0.51484375, 0.3109375, 0.86875]
+
+  Temp dir cleaned up.
+
+======================================================================
+  DATASET: DS3_SEG
+======================================================================
+  ZIP : Conveyor-Belt-Defects 1.v2i.yolov8.zip
+  Size: 1.83 MB
+  Extracting to temp: C:\Users\HARISH~1\AppData\Local\Temp\sih_DS3_SEG_8_isxgzj
+
+  Total extracted files : 76
+  Image files           : 32
+  Label files           : 34
+  YAML files            : ['data.yaml']
+
+  ── data.yaml content ──
+
+  File: data.yaml
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 2
+names: ['crack', 'hole-tear']
+
+roboflow:
+  workspace: testing-rafdh
+  project: conveyor-belt-defects-cm65k
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/testing-rafdh/conveyor-belt-defects-cm65k/dataset/2
+
+  Declared classes (nc=2): ['crack', 'hole-tear']
+
+  ── Per-split image and label counts ──
+  [train] images: 26   labels: 0
+  [valid] images: 3   labels: 0
+  [test] images: 3   labels: 0
+
+  ── Label format detection (sample 10 files) ──
+  Label format distribution (from up to 200 files): {'segmentation': 20, 'standard': 12}
+
+  ── Class distribution across ALL label files ──
+  Total bounding boxes / polygons : 48
+  Empty label files               : 0
+  Invalid/unparseable rows        : 0
+
+  Class ID → count:
+    [0] crack                          : 23
+    [1] hole-tear                      : 25
+
+  ── Sample label file contents (first 3 non-empty) ──
+
+  File: README.dataset.txt
+  Format: mixed([1, 4, 5])  | Rows: 4
+    ['#', 'Conveyor-Belt-Defects', '>', '2025-08-02', '10:30pm']
+    ['https://universe.roboflow.com/testing-rafdh/conveyor-belt-defects-cm65k']
+    ['Provided', 'by', 'a', 'Roboflow', 'user']
+    ['License:', 'CC', 'BY', '4.0']
+
+  File: README.roboflow.txt
+  Format: mixed([1, 2, 5, 6, 7, 8, 9, 10, 11, 14, 15])  | Rows: 19
+    ['Conveyor-Belt-Defects', '-', 'v2', '2025-08-02', '10:30pm']
+    ['==============================']
+    ['This', 'dataset', 'was', 'exported', 'via', 'roboflow.com', 'on', 'August', '2,', '2025', 'at', '5:01', 'PM', 'GMT']
+    ['Roboflow', 'is', 'an', 'end-to-end', 'computer', 'vision', 'platform', 'that', 'helps', 'you']
+    ['*', 'collaborate', 'with', 'your', 'team', 'on', 'computer', 'vision', 'projects']
+
+  File: valid\labels\Crack-6_jpg.rf.49abee40dfcf2c157fd41f992eee3050.txt
+  Format: segmentation  | Rows: 1
+    [1.0, 0.5008600000000001, 0.854369046875, 0.5911833328125, 0.2489642859375, 0.43978333281250004, 0.24807738124999998, 0.42774333281250004, 0.8451488093749999, 0.4526866671875, 0.8712678578125, 0.5008600000000001, 0.854369046875]
+
+  Temp dir cleaned up.
+
+======================================================================
+  AUDIT COMPLETE — Summary
+======================================================================
+
+  Dataset                       | Format       | Notes
+  ------------------------------|--------------|-------------------------------
+  DS1 Conveyor-belt-damage v1i  | OBB          | Needs conversion; filter 3 classes
+  DS2 CONVEYOR BELT v2i         | Standard     | Ready to use; 1-class (tear)
+  DS3 Conveyor-Belt-Defects v2i | Segmentation | Needs polygon→bbox conversion
+  old_five_class_model.pt       | YOLOv8n      | 5 classes; inspect head before reuse
+  best.pt                       | YOLOv8n      | 1 class (tear)
+  

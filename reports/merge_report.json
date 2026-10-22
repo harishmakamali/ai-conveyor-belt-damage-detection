@@ -1,0 +1,73 @@
+{
+  "per_dataset_stats": {
+    "DS1": {
+      "total_images": 922,
+      "duplicates_removed": 0,
+      "background_images": 5,
+      "skipped_annotations": 0,
+      "class_counter_1": 42,
+      "class_counter_0": 691,
+      "class_counter_4": 405,
+      "class_counter_5": 283,
+      "class_counter_3": 120
+    },
+    "DS2": {
+      "total_images": 1263,
+      "duplicates_removed": 0,
+      "background_images": 0,
+      "skipped_annotations": 0,
+      "class_counter_0": 1301
+    },
+    "DS3": {
+      "total_images": 32,
+      "duplicates_removed": 1,
+      "background_images": 0,
+      "skipped_annotations": 0,
+      "class_counter_2": 22,
+      "class_counter_1": 25
+    }
+  },
+  "unified_classes": [
+    "tear",
+    "hole",
+    "crack",
+    "puncture",
+    "patch_work",
+    "impact_damage"
+  ],
+  "class_distribution": {
+    "crack": 22,
+    "hole": 67,
+    "tear": 1992,
+    "patch_work": 405,
+    "impact_damage": 283,
+    "puncture": 120
+  },
+  "class_mapping": {
+    "DS1": {
+      "hole": "hole",
+      "human": null,
+      "other objects": null,
+      "puncture": "puncture",
+      "roller": null,
+      "tear": "tear",
+      "impact damage": "impact_damage",
+      "patch work": "patch_work"
+    },
+    "DS2": {
+      "tear": "tear"
+    },
+    "DS3": {
+      "crack": "crack",
+      "hole-tear": "hole"
+    },
+    "OLD_MODEL (reference only)": {
+      "belt splice": null,
+      "deep scratch": null,
+      "longitudinal tear": null,
+      "normal belt": null,
+      "slight scratch": null
+    }
+  },
+  "note_hole_tear": "hole-tear from DS3 was mapped to 'hole'. Inspect DS3 images manually to verify this is appropriate."
+}

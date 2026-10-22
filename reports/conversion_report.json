@@ -1,0 +1,30 @@
+{
+  "DS1": {
+    "removed_labels": {
+      "Human": 118,
+      "Other Objects": 130,
+      "Roller": 681
+    },
+    "kept_labels": {
+      "Hole": 42,
+      "Tear": 691,
+      "patch work": 405,
+      "impact damage": 283,
+      "Puncture": 120
+    },
+    "background_images": 5,
+    "total_images": 922,
+    "total_label_files": 922
+  },
+  "DS2": {
+    "total_images": 1263,
+    "total_labels": 1263,
+    "issues": []
+  },
+  "DS3": {
+    "total_images": 32,
+    "total_labels": 32,
+    "converted_polygons": 25,
+    "standard_boxes": 23
+  }
+}
